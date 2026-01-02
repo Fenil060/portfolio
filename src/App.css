@@ -2,9 +2,7 @@
 body {
   margin: 0;
   min-height: 100dvh;
-  background: radial-gradient(circle at top left, #4309a0 0%, transparent 35%), 
-              radial-gradient(circle at bottom right, #4309a0 0%, transparent 40%),
-              linear-gradient(180deg, #1d1d47, #281b30);
+  background: black;
   color: #e5e7eb;
   font-family: Arial, Helvetica, sans-serif;
   line-height: 1.6;
@@ -16,36 +14,80 @@ body {
   max-width: 1280px;
   margin: 0 auto;
   padding: 2rem;
+  overflow-x: hidden;
+  overscroll-behavior: none;
 }
 
 /* ---------- HEADER ---------- */
+
 .header {
-  text-align: center;
   margin-bottom: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;   /*  centers horizontally */
+  gap: 3rem;      
+}
+
+
+.image img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.welcome p{
+  font-size: 1.2rem;
+  color: #38bdf8;
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 12px;
+  width: fit-content;
+  background: rgba(124, 124, 255, 0.08);
+  border: 1px solid rgba(124, 124, 255, 0.3);
+  border-radius: 30px;
 }
 
 .header h1 { 
   font-size: 2.5rem; 
   margin-bottom: 0.25rem; 
-  color: #ff7fff; 
 }
 
-.subtitle { 
+.subtitle {
+  padding-top: 10px; 
   color: #ccc; 
   margin-bottom: 1rem; 
   font-size: 1.1rem;
+  max-width: 600px;
+  padding-bottom: 10px;
+}
+
+.resume-btn {
+  align-items: center;
+  gap: 8px;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+}
+
+.resume-btn:hover { 
+  box-shadow: 0 12px 30px rgba(12,12,220,0.4); 
 }
 
 .links {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  gap: 50px;
   margin-top: 1rem;
+  padding-top: 30px;
+  padding-bottom: 10px;
 }
 
 .links a { 
-  color: #fff; 
   transition: transform 0.2s; 
 }
 
@@ -53,71 +95,151 @@ body {
   transform: scale(1.2); 
 }
 
-.resume-btn {
-  display: inline-flex; 
-  align-items: center; 
-  gap: 8px; 
-  margin-top: 12px;
-  padding: 12px 22px; 
-  background: linear-gradient(135deg, #38bdf8, #1e3a8a);
-  color: #fff; 
-  font-weight: 600; 
-  border-radius: 30px; 
-  text-decoration: none;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-.resume-btn:hover { 
-  transform: translateY(-3px) scale(1.03); 
-  box-shadow: 0 12px 30px rgba(56,189,248,0.4); 
-}
-
 /* ---------- SECTION HEADERS ---------- */
 section {
   margin-bottom: 3rem;
   padding: 2rem;
-  background: rgba(30, 41, 59, 0.8);
   border-radius: 16px;
 }
 
 section h2 {
   font-size: 2rem;
-  color: #d16eff;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #1e15cc;
 }
 
 /* ---------- ABOUT ---------- */
 section p {
   color: #e0e0ff;
-  max-width: 800px;
-  margin: 0 auto;
+  max-width: 1000px;
+  font-size: 1.2rem;
+
 }
+
+/* ---------- education ---------- */
+/* Education card */
+.education {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+  max-width: 900px;
+  margin: 0 auto 20px;
+  padding: 40px;
+  border-radius: 16px;
+  box-shadow: 0 0px 1px rgba(255, 254, 254, 0.45);
+}
+
+.education:hover {
+  border: thin solid #00bfa5;
+}
+
+/* Icon */
+.icon {
+  background: rgba(44, 193, 119, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon:hover {
+  border: 1px solid #00bfa5;
+}
+
+.edu-icon {
+  font-size: 36px;
+  color: #00bfa5;
+}
+
+/* Text container */
+.edu-p {
+  flex: 1; /* takes full width next to icon */
+}
+
+/* Header with title + date */
+.edu-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-header h3 {
+  margin: 0;
+  color: #fff;
+  font-size: 18px;
+  flex: 1;
+}
+
+.edu-date {
+  color: #aaa;
+  font-size: 14px;
+}
+
+.edu-date i {
+  margin-right: 4px;
+}
+
+/* University name */
+.university {
+  margin: 4px 0;
+  color: #00bfa5;
+  font-weight: 500;
+}
+
+/* Paragraph text */
+.edu-p p {
+  margin: 2px 0;
+  color: #ccc;
+  font-size: 14px;
+}
+
+/* Tags/badges */
+.edu-tags {
+  margin-top: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.edu-tags span {
+  background: #0d0d0d;
+  color: #00bfa5;
+  border: 1px solid #00bfa5;
+  border-radius: 12px;
+  padding: 4px 10px;
+  font-size: 12px;
+  cursor: default;
+}
+
 
 /* ---------- SKILLS ---------- */
 .skills-grid { 
   display: grid; 
-  grid-template-columns: repeat(4, 1fr); 
+  grid-template-columns: repeat(6, 1fr); 
   gap: 16px; 
   justify-items: center; 
   margin-top: 20px; 
 }
-@media (max-width:1024px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
-@media (max-width:640px){ .skills-grid{grid-template-columns:1fr;} }
+@media (max-width:1024px){ .skills-grid{grid-template-columns:repeat(4,1fr);} }
+@media (max-width:640px){ .skills-grid{grid-template-columns:repeat(2,1fr);} }
 
 .skill-tile {
   width: 100px; 
   height: 100px; 
-  background: rgba(56, 52, 82, 0.9);
   display: flex; 
   flex-direction: column; 
   align-items: center; 
   justify-content: center;
   border-radius: 16px; 
   transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 0px 1px rgba(255, 254, 254, 0.45);
   cursor: pointer;
   --icon-color: #fff;
+  color: var(--icon-color);
 }
-.skill-tile:hover { 
-  transform: translateY(-5px) scale(1.05); 
+.skill-tile:hover {  
   box-shadow: 0 12px 25px 0 currentColor; 
 }
 
@@ -134,106 +256,230 @@ section p {
 }
 
 /* ---------- PROJECTS ---------- */
-.projects .MuiCard-root {
-  flex: 1 1 300px;
-  max-width: 345px;
-  background: rgba(30,41,59,0.95); /* darker so text is more visible */
-  color: #ffffff; /* bright white text */
-  border-radius: 16px;
-  border: 2px solid #38bdf8; /* visible border */
-  padding: 2rem 1rem 1rem 1rem;
+.projects {
   display: flex;
-  flex-direction: column;
+  gap: 32px;
   align-items: center;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
+  padding: 24px;
+  border-radius: 18px;
+  box-shadow: 0 0px 1px rgba(255, 254, 254, 0.45);
 }
 
-.projects .MuiCard-root:hover {
-  transform: translateY(-5px) scale(1.05);
-  box-shadow: 0 12px 25px rgba(56,189,248,0.4);
+.projects:hover {
+  border: 0.2px solid #a855f7;
 }
 
-/* Center the image inside card */
-.projects .MuiCardMedia-root {
-  width: 70%;      /* slightly bigger image */
-  max-width: 250px; /* restrict max size */
-  height: auto;    
-  border-radius: 12px;
-  margin-bottom: 1rem;
-  object-fit: contain;
+/* Image */
+.project-image img {
+  width: 320px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 14px;
 }
 
-/* Card text */
-.projects .MuiCardContent-root {
-  text-align: center;
-  color: #ffffff;  /* ensure description and title are visible */
+/* Details */
+.project-details {
+  flex: 1;
 }
 
-.projects .MuiTypography-root {
-  color: #ffffff;  /* all text inside card */
+.project-details h3 {
+  font-size: 1.4rem;
+  color: #e5e7eb;
+  margin-bottom: 10px;
 }
+
+.project-details p {
+  font-size: 0.95rem;
+  color: #cbd5f5;
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+/* Skill buttons */
+.project-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.skill-btn {
+  padding: 6px 12px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+  background: rgba(99, 102, 241, 0.15);
+  color: #a5b4fc;
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  cursor: default;
+}
+
+/* Links */
+.project-links {
+  display: flex;
+  gap: 14px;
+}
+
+.project-link-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(90deg, #6366f1, #a855f7);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-link-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(168, 85, 247, 0.5);
+}
+
 
 
 /* ---------- LEETCODE STATS ---------- */
-.leetcode-section{  
+.problem-visual {
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.difficulty-block {
+  padding: 14px;
+  border-radius: 14px;
+  background: #020617;
+}
+
+.difficulty-block span {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #e5e7eb;
+}
+
+.progress {
+  height: 8px;
+  background: #1e293b;
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progress-bar {
+  height: 100%;
+  border-radius: 999px;
+}
+
+.easy .progress-bar {
+  background: linear-gradient(90deg, #22c55e, #4ade80);
+}
+
+.medium .progress-bar {
+  background: linear-gradient(90deg, #facc15, #fde047);
+}
+
+.hard .progress-bar {
+  background: linear-gradient(90deg, #ef4444, #f87171);
+}
+
+.difficulty-block small {
+  font-size: 0.75rem;
+  color: #94a3b8;
+}
+
+.skill-btn {
+  padding: 6px 14px;
+  font-size: 0.75rem;
+  border-radius: 999px;
+
+  background: rgba(59, 130, 246, 0.15);   /* blue background */
+  color: #60a5fa;                         /* blue text */
+  border: 1px solid rgba(59, 130, 246, 0.45);
+
+  cursor: default;
+  transition: all 0.25s ease;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .problem-visual {
+    width: 100%;
+  }
+}
+
+/* -------------connect------------------ */
+.lets-connect {
+  margin-top: 80px;
+  padding: 40px 24px;
   text-align: center;
-  padding:2rem; 
-  background-color:  rgba(56, 52, 82, 0.9); 
-  margin-top:2rem; 
-  border-radius: 16px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
 }
 
-.leetcode-section h3 { 
-  color:#ff2d95; 
-  margin:1.5rem 0 1rem 0; 
+.lets-connect h2 {
+  font-size: 2rem;
+  color: #e5e7eb;
+  margin-bottom: 12px;
 }
 
-.leetcode-stats { 
-  display:flex; 
-  flex-direction:column; 
-  align-items:center; 
-  gap:1rem; 
+.lets-connect p {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: #94a3b8;
+  font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.stat-card {
-  border:1px solid #38bdf8; 
-  border-radius:12px; 
-  padding:1rem 2rem; 
-  min-width:150px;
-  text-align:center; 
-  color:#fff; 
-  transition: transform 0.3s, box-shadow 0.3s;
-  height: 100px;
+/* Social buttons */
+.connect-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.stat-card h2 { 
-  font-size:2rem; 
-  font-weight:bold; 
-  color:#00ff7f; 
+.connect-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 0.85rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.stat-card p { 
-  font-size:1rem; 
-  margin-bottom:0.25rem; 
-  font-weight:500; 
+/* Platform colors */
+.connect-btn.github {
+  background: #181717;
 }
 
-.stat-card:hover { 
-  transform: translateY(-5px); 
-  box-shadow:0 12px 25px rgba(0,255,127,0.3); 
+.connect-btn.linkedin {
+  background: #0a66c2;
 }
 
-.difficulty-cards { 
-  display:flex; 
-  flex-wrap: wrap; 
-  justify-content:center; 
-  gap:1rem; 
+.connect-btn.email {
+  background: #b80b22;
 }
 
-.stat-card.easy p { color:#2196f3; }
-.stat-card.medium p { color:#ffeb3b; }
-.stat-card.hard p { color:#f44336; }
+/* Hover */
+.connect-btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .connect-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
 
 /* ---------- FOOTER ---------- */
 footer { 
@@ -244,11 +490,114 @@ footer {
 }
 
 /* ---------- RESPONSIVE ---------- */
-@media (max-width:480px){
-  .header h1 { font-size: 2rem; }
-  .subtitle { font-size: 1rem; }
-  .resume-btn { padding: 10px 16px; font-size: 0.9rem; }
-  .skill-tile { width: 80px; height: 80px; }
-  .skill-icon { font-size: 1.5rem; }
-  section { padding: 1rem; }
+@media (max-width: 480px) {
+
+  /* Section spacing */
+  section {
+    padding: 1.25rem;
+  }
+
+  section h2 {
+    font-size: 1.6rem;
+    text-align: center;
+  }
+
+  /* Header text */
+  .header h1 {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* Skill grid tighter */
+  .skills-grid {
+    gap: 12px;
+  }
+
+  /* Buttons full width */
+  .project-link-btn,
+  .connect-btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* Connect section */
+  .lets-connect {
+    padding: 30px 16px;
+  }
 }
+
+
+@media (max-width: 768px) {
+
+  /* Header becomes vertical */
+  .header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .links {
+    justify-content: center;
+    gap: 30px;
+  }
+
+  /* Education cards stack nicely */
+  .education {
+    flex-direction: column;
+    padding: 24px;
+  }
+
+  .edu-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  /* Projects & Problem Solving stack */
+  .projects {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .project-image img {
+    width: 100%;
+    height: auto;
+  }
+
+  .problem-visual {
+    width: 100%;
+  }
+
+  /* Center skill pills */
+  .project-skills {
+    justify-content: center;
+  }
+
+  .project-links {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 1024px) {
+  /* Header */
+  .header {
+    gap: 2rem;
+  }
+
+  /* Projects & Problem Solving */
+  .projects {
+    gap: 24px;
+  }
+
+  .project-image img {
+    width: 280px;
+    height: 180px;
+  }
+
+  .problem-visual {
+    width: 280px;
+  }
+}
+
