@@ -253,16 +253,10 @@ function App() {
   </p>
 
   <div className="connect-links">
-    <a
-      href="https://github.com/your-username"
-      target="_blank"
-      className="connect-btn github"
-    >
-      <FaGithub /> GitHub
-    </a>
+    <a href="https://github.com/Fenil060" target="_blank" className="connect-btn github"><FaGithub /> GitHub</a>
 
     <a
-      href="https://linkedin.com/in/your-username"
+      href="https://linkedin.com/in/fenil-gadhiya"
       target="_blank"
       className="connect-btn linkedin"
     >
@@ -270,7 +264,7 @@ function App() {
     </a>
 
     <a
-      href="mailto:yourmail@gmail.com"
+      href="mailto:gadhiyafenil090@gmail.com"
       className="connect-btn email"
     >
       <FaEnvelope /> Email
