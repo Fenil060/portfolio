@@ -260,7 +260,7 @@ section p {
   display: flex;
   gap: 32px;
   align-items: center;
-  padding: 24px;
+  padding: 40px;
   border-radius: 18px;
   box-shadow: 0 0px 1px rgba(255, 254, 254, 0.45);
 }

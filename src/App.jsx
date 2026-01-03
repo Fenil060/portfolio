@@ -6,8 +6,7 @@ import { SiTailwindcss, SiMysql, SiMui, SiPostman, SiMongoose } from "react-icon
 import { MdArchitecture } from "react-icons/md";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import wanderlustImg from "./assets/wanderlust.png";
-
-
+import temperatureImg from "./assets/temperature.png";
 
 function App() {
   return (
@@ -134,9 +133,9 @@ function App() {
 
       {/* ---------- PROJECTS ---------- */}
         <section>
-          <h2>Projects</h2>
+          <h2 style={{ paddingBottom: '20px' }}>Projects</h2>
 
-          <div className="projects">
+          <div className="projects" >
             {/* Left: Image */}
             <div className="project-image">
               <img src={wanderlustImg} alt="Wanderlust" />
@@ -172,6 +171,39 @@ function App() {
                   <FaGithub /> GitHub
                 </a>
                 <a href="https://wanderlust-r0g5.onrender.com" target="_blank" className="project-link-btn">
+                  <i className="fa-solid fa-globe"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects">
+            {/* Left: Image */}
+            <div className="project-image">
+              <img src={temperatureImg} alt="temperatureImg" />
+            </div>
+
+            {/* Right: Details */}
+            <div className="project-details">
+              <h3>Temperature Converter</h3>
+
+              <p>
+                A responsive Temperature Converter web application that allows users to instantly convert values between Celsius, Fahrenheit, and Kelvin. The application includes proper input validation to ensure only numeric values are accepted, preventing incorrect entries. It provides accurate, real-time conversion results with clearly displayed units, enhancing usability. The clean and modern user interface is built using css, ensuring a smooth and responsive experience across all devices.
+              </p>
+
+              {/* Skills as buttons */}
+              <div className="project-skills">
+                <span className="skill-btn">HTML</span>
+                <span className="skill-btn">CSS</span>
+                <span className="skill-btn">JavaScript</span>
+              </div>
+
+              {/* Links */}
+              <div className="project-links">
+                <a href="https://github.com/Fenil060/Temperature-converter" target="_blank" className="project-link-btn">
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://temperature-converter-theta-one.vercel.app/" target="_blank" className="project-link-btn">
                   <i className="fa-solid fa-globe"></i> Live Demo
                 </a>
               </div>
