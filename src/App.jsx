@@ -65,7 +65,7 @@ function App() {
                 </span>
               </div>
               <p className="university">Gujarat Technological University</p>
-              <p>CGPA: 7.89 / 10</p>
+              <p>CGPA: 8.30 / 10</p>
 
               <div className="edu-tags">
                 <span>Object Oriented Programming</span>
@@ -224,7 +224,7 @@ function App() {
               <div className="progress">
                 <div className="progress-bar" style={{ width: "55%" }}></div>
               </div>
-              <small>147 Solved</small>
+              <small>150 Solved</small>
             </div>
 
             <div className="difficulty-block medium">
@@ -232,7 +232,7 @@ function App() {
               <div className="progress">
                 <div className="progress-bar" style={{ width: "40%" }}></div>
               </div>
-              <small>125 Solved</small>
+              <small>140 Solved</small>
             </div>
 
             <div className="difficulty-block hard">
@@ -240,7 +240,7 @@ function App() {
               <div className="progress">
                 <div className="progress-bar" style={{ width: "10%" }}></div>
               </div>
-              <small>17 Solved</small>
+              <small>21 Solved</small>
             </div>
           </div>
 
@@ -251,7 +251,7 @@ function App() {
             <p>
               Actively practicing data structures and algorithms on LeetCode with a
               strong focus on writing efficient and optimized solutions. Solved
-              280+ problems covering a wide range of difficulty levels and core DSA
+              300+ problems covering a wide range of difficulty levels and core DSA
               topics.
             </p>
 
@@ -272,6 +272,8 @@ function App() {
               <span className="skill-btn">BST</span>
               <span className="skill-btn">Graphs</span>
               <span className="skill-btn">DSU</span>
+              <span className="skill-btn">Tries</span>
+              <span className="skill-btn">Dynamic Programming</span>
             </div>
           </div>
         </div>
