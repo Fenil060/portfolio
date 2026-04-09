@@ -7,6 +7,8 @@ import { MdArchitecture } from "react-icons/md";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import wanderlustImg from "./assets/wanderlust.png";
 import temperatureImg from "./assets/temperature.png";
+import bookTradeImg from "./assets/bookTrade.png";
+import calendarImg from "./assets/calendar.png";
 
 function App() {
   return (
@@ -135,6 +137,85 @@ function App() {
         <section>
           <h2 style={{ paddingBottom: '20px' }}>Projects</h2>
 
+          <div className="projects">
+            {/* Left: Image */}
+            <div className="project-image">
+              <img src={calendarImg} alt="calendarImg" />
+            </div>
+
+            {/* Right: Details */}
+            <div className="project-details">
+              <h3> calendar Component </h3>
+
+              <p>
+              This Calendar component was developed as part of the TakeUForward SDE Intern Frontend Challenge, 
+              showcasing my ability to build interactive and user-friendly UI components. 
+              Built using React and Framer Motion, the component features smooth animated transitions 
+              between months, intuitive date range selection, and responsive design for different screen sizes.
+              It efficiently manages state for handling user interactions such as selecting start and end dates, 
+              while maintaining a clean and modern UI. This project highlights my skills in frontend development, 
+              component design, and creating seamless user experiences under challenge-based constraints.
+              </p>
+
+              {/* Skills as buttons */}
+              <div className="project-skills">
+                <span className="skill-btn">Rect.js</span>
+                <span className="skill-btn">CSS</span>
+              </div>
+
+              {/* Links */}
+              <div className="project-links">
+                <a href="https://github.com/Fenil060/takeUforward-frontend-calendar-challenge" target="_blank" className="project-link-btn">
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://take-uforward-frontend-calendar-cha.vercel.app/" target="_blank" className="project-link-btn">
+                  <i className="fa-solid fa-globe"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div className="projects">
+            {/* Left: Image */}
+            <div className="project-image">
+              <img src={bookTradeImg} alt="bookTradeImg" />
+            </div>
+
+            {/* Right: Details */}
+            <div className="project-details">
+              <h3> BookTrade </h3>
+
+              <p>
+              BookTrade is a full-stack web application designed to simplify the process of buying and selling used books among students. 
+              Built using the MERN stack, the platform allows users to list books, browse available listings, and send structured purchase requests to book owners. 
+              It includes features like user authentication (including Google Sign-In), request management with status tracking, 
+              and a rule-based system that ensures fair interactions between buyers and sellers. The application emphasizes a 
+              clean and responsive UI/UX, efficient state management, and smooth user flows for browsing and purchasing books. 
+              BookTrade showcases practical implementation of modern web development concepts in a real-world scenario.
+              </p>
+
+              {/* Skills as buttons */}
+              <div className="project-skills">
+                <span className="skill-btn">Rect.js</span>
+                <span className="skill-btn">Node.js</span>
+                <span className="skill-btn">Express.js</span>
+                <span className="skill-btn">MongoDB</span>
+                <span className="skill-btn">CSS</span>
+                <span className="skill-btn">Javascript</span>
+              </div>
+
+              {/* Links */}
+              <div className="project-links">
+                <a href="https://github.com/Fenil060/bookTrade" target="_blank" className="project-link-btn">
+                  <FaGithub /> GitHub
+                </a>
+                <a href="https://book-trade-pi.vercel.app/" target="_blank" className="project-link-btn">
+                  <i className="fa-solid fa-globe"></i> Live Demo
+                </a>
+              </div>
+            </div>
+          </div>
+
           <div className="projects" >
             {/* Left: Image */}
             <div className="project-image">
@@ -222,9 +303,9 @@ function App() {
             <div className="difficulty-block easy">
               <span>Easy</span>
               <div className="progress">
-                <div className="progress-bar" style={{ width: "55%" }}></div>
+                <div className="progress-bar" style={{ width: "35%" }}></div>
               </div>
-              <small>150 Solved</small>
+              <small>170 Solved</small>
             </div>
 
             <div className="difficulty-block medium">
@@ -232,7 +313,7 @@ function App() {
               <div className="progress">
                 <div className="progress-bar" style={{ width: "40%" }}></div>
               </div>
-              <small>140 Solved</small>
+              <small>200 Solved</small>
             </div>
 
             <div className="difficulty-block hard">
@@ -240,7 +321,7 @@ function App() {
               <div className="progress">
                 <div className="progress-bar" style={{ width: "10%" }}></div>
               </div>
-              <small>21 Solved</small>
+              <small>31 Solved</small>
             </div>
           </div>
 
@@ -251,7 +332,7 @@ function App() {
             <p>
               Actively practicing data structures and algorithms on LeetCode with a
               strong focus on writing efficient and optimized solutions. Solved
-              300+ problems covering a wide range of difficulty levels and core DSA
+              400+ problems covering a wide range of difficulty levels and core DSA
               topics.
             </p>
 
